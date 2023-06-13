@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Teko:wght@600&display=swap");
+
+:root {
+  font-size: 12px;
+  font-family: "Merriweather", serif;
+  --bigger-font-size: 6rem;
+  --big-font-size: 3rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --header-height: 3rem;
+  --logo-color: #f3152a;
+  --hero-text-color: #cccccc;
+  --header-height: 3rem;
+}
+
+/*==================== NORMALIZE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== BUTTONS ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+.button--white {
+  background-color: #fff;
+  color: var(--first-color);
+}
+
+.button--white:hover {
+  background-color: #fff;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--small {
+  padding: 0.75rem 1rem;
+}
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.button--link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
+
+/*==================== UTILITIES ====================*/
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.container {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/*==================== SECTIONS ====================*/
+.hero {
+  height: 80vh;
+  background: url(./assets/hero.jpg) #333333ff;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+  padding-top: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--bigger-font-size);
+  font-family: "Teko", sans-serif;
+  color: var(--logo-color);
+}
+
+.hero h3 {
+  font-size: var(--big-font-size);
+  color: var(--hero-text-color);
+}
+
+.hero .container {
+  align-items: center;
+}
+
+.powered {
+  margin-top: 4rem;
+  max-height: 20vh;
+}
+
+.powered .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.powered img {
+  max-height: 15vh;
+  max-width: 15vw;
+  height: auto;
+  width: auto;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+@media screen and (min-width: 376px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .flex-responsive {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1060px) {
+  body {
+    :root {
+      font-size: 18px;
+    }
+  }
+
+  .container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}

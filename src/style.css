@@ -13,7 +13,7 @@
   --smaller-font-size: 0.813rem;
   --header-height: 3rem;
   --logo-color: #f3152a;
-  --hero-text-color: #cccccc;
+  --text-color: #cccccc;
   --header-height: 3rem;
 }
 
@@ -121,6 +121,7 @@ img {
 .container {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  margin-top: 4rem;
 }
 
 /*==================== SECTIONS ====================*/
@@ -145,7 +146,7 @@ img {
 
 .hero h3 {
   font-size: var(--big-font-size);
-  color: var(--hero-text-color);
+  color: var(--text-color);
 }
 
 .hero .container {
@@ -169,6 +170,59 @@ img {
   width: auto;
 }
 
+.services .container {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.service {
+  border-radius: 20px;
+  aspect-ratio: 1;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.covert-ops {
+  background: url(./assets/covert-ops.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.training {
+  background: url(./assets/training.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.identity-manupilation {
+  background: url(./assets/identitiy-manipulation.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.service-contents {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  bottom: -100%;
+  background-color: #00000088;
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.service:hover .service-contents {
+  bottom: 0;
+}
+
 /*==================== MEDIA QUERIES ====================*/
 @media screen and (min-width: 376px) {
   :root {
@@ -176,9 +230,34 @@ img {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .services .container {
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .services p {
+    font-size: 10px;
+  }
+
+  .service {
+    aspect-ratio: 2/3;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .services p {
+    font-size: 13px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   :root {
     font-size: 16px;
+  }
+
+  .services p {
+    font-size: 1rem;
   }
 
   .flex-responsive {
@@ -201,5 +280,9 @@ img {
   .container {
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+
+  .services .container {
+    gap: 2rem;
   }
 }

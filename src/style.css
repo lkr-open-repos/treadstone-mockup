@@ -33,7 +33,6 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -271,20 +270,41 @@ br {
 /*================ POWERED BY ================*/
 
 .powered {
-  margin-top: 4rem;
-  max-height: 14vh;
-}
-
-.powered .container {
-  justify-content: space-between;
-  align-items: center;
+  overflow: hidden;
+  height: 18vh;
+  width: 100%;
+  margin-left: 0;
 }
 
 .powered img {
-  max-height: 10vh;
-  max-width: 15vw;
-  height: auto;
-  width: auto;
+  object-fit: cover;
+  display: block;
+  width: 10vw;
+  margin: 5vw;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-20vw * 4));
+  }
+}
+
+.powered .container {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  margin-left: 0;
+  margin: 0.5vh 0;
+}
+
+.sliding {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 18vh;
+  width: calc(20vw * 4);
 }
 
 /*================ SERVICES ================*/
@@ -359,32 +379,32 @@ br {
 
 /*================ WHO WE ARE ================*/
 
-.who_we_are-container .container {
+.about-us-container .container {
   list-style-type: none;
   gap: 1rem;
   color: var(--text-color-dark);
   flex-direction: column;
 }
 
-.who_we_are-images {
+.about-us-images {
   overflow: hidden;
   position: relative;
   aspect-ratio: 3/2;
 }
 
-.who_we_are-text {
+.about-us-text {
   position: relative;
   text-align: center;
   font-weight: 700;
   display: table;
 }
 
-.who_we_are-text p {
+.about-us-text p {
   margin: auto 0;
   display: table-cell;
   vertical-align: middle;
   font-size: 1.25rem;
-  font-family: "Teko", sans-serif;
+  /* font-family: "Teko", sans-serif; */
 }
 
 /*=========== SLIDESHOW ============*/
@@ -410,7 +430,7 @@ br {
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 30s linear infinite 0s;
+  animation: changeAnimation 30s linear infinite 0s;
 }
 
 .slideshow li:nth-child(1) span {
@@ -433,7 +453,7 @@ br {
   animation-delay: 24s;
 }
 
-@keyframes imageAnimation {
+@keyframes changeAnimation {
   0% {
     opacity: 0;
     animation-timing-function: ease-in;
@@ -446,24 +466,6 @@ br {
     opacity: 1;
   }
   25% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes titleAnimation {
-  0% {
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  17% {
-    opacity: 1;
-  }
-  19% {
     opacity: 0;
   }
   100% {
@@ -509,6 +511,7 @@ br {
   display: block;
   color: var(--text-color-dark);
   max-width: 65%;
+  font-weight: 700;
 }
 
 .testimonials-container span {
@@ -673,6 +676,22 @@ footer .container div:first-child * {
     margin-left: auto;
   }
 
+  .powered {
+    height: 26vh;
+  }
+
+  .powered .container {
+    margin: 1vh 0;
+  }
+
+  .sliding {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 26vh;
+    width: calc(20vw * 4);
+  }
+
   .services p {
     font-size: 1rem;
   }
@@ -682,22 +701,19 @@ footer .container div:first-child * {
   }
 
   .container {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin: 6rem;
   }
 
-  .who_we_are .container {
+  .about-us .container {
     flex-direction: row;
   }
 
-  .who_we_are-images {
+  .about-us-images {
     aspect-ratio: 7/8;
     flex: 1;
   }
 
-  .who_we_are-text {
+  .about-us-text {
     flex: 2;
     text-align: center;
   }

@@ -364,16 +364,20 @@ br {
   display: none;
 }
 
-.service:hover {
+.service:hover,
+.service:focus {
   box-shadow: inset 0 0 0 2000px #00000088;
 }
 
 .service:hover p,
-.service:hover .button {
+.service:hover .button,
+.service:focus p,
+.service:focus .button {
   display: block;
 }
 
-.service:hover .service-contents {
+.service:hover .service-contents,
+.service:focus .service-contents {
   bottom: 0px;
 }
 

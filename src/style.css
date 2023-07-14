@@ -239,7 +239,7 @@ br {
 /*================ HERO ================*/
 
 .hero {
-  height: 80vh;
+  height: max(80vh, 30rem);
   background: url(./assets/hero.jpg) #333333ff;
   background-size: cover;
   background-position: right;
@@ -271,7 +271,7 @@ br {
 
 .powered {
   overflow: hidden;
-  height: 18vh;
+  height: max(18vh, 6rem);
   width: 100%;
   margin-left: 0;
 }

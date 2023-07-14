@@ -365,7 +365,7 @@ br {
 }
 
 .service:hover,
-.services:active {
+.service:active {
   box-shadow: inset 0 0 0 2000px #00000088;
 }
 

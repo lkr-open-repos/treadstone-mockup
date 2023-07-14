@@ -239,7 +239,7 @@ br {
 /*================ HERO ================*/
 
 .hero {
-  height: max(80vh, 30rem);
+  min-height: 80vh;
   background: url(./assets/hero.jpg) #333333ff;
   background-size: cover;
   background-position: right;

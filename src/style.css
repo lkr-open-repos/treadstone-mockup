@@ -168,7 +168,7 @@ br {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   .nav-menu {
     position: fixed;
     background-color: var(--background-color);
@@ -201,7 +201,7 @@ br {
 
 .nav-link {
   color: var(--text-color);
-  font-size: var(--small-font-size);
+  font-size: var(--h2-font-size);
   transition: 0.3s;
 }
 
@@ -605,8 +605,11 @@ footer h3 {
 footer .nav-list {
   flex-direction: column;
   align-items: start;
-  font-size: var(--normal-font-size);
   row-gap: 1rem;
+}
+
+footer .nav-link {
+  font-size: var(--normal-font-size);
 }
 
 footer .contact-input {
@@ -681,6 +684,10 @@ footer .mail-link {
   .nav-list {
     flex-direction: row;
     column-gap: 3rem;
+  }
+
+  .nav .nav-link {
+    font-size: var(--normal-font-size);
   }
 
   .nav-menu {

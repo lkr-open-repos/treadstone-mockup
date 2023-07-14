@@ -364,7 +364,8 @@ br {
   display: none;
 }
 
-.service:hover {
+.service:hover,
+.services:active {
   box-shadow: inset 0 0 0 2000px #00000088;
 }
 
@@ -375,21 +376,6 @@ br {
 
 .service:hover .service-contents {
   bottom: 0px;
-}
-
-@media (hover: none) {
-  .services .service {
-    box-shadow: inset 0 0 0 2000px #00000088;
-  }
-
-  .service p,
-  .service .button {
-    display: block;
-  }
-
-  .service .service-contents {
-    bottom: 0px;
-  }
 }
 
 /*================ WHO WE ARE ================*/
